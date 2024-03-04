@@ -93,28 +93,6 @@
             android:padding="12dp"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textViewRePass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="RePassword"
-            android:textColor="#000000"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editRePass"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/edittext_background"
-            android:ems="10"
-            android:hint="Nhập lại mật khẩu của bạn"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:textSize="18sp" />
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/SignInBtn"
             android:layout_width="match_parent"
