@@ -4,21 +4,38 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.KeyEvent;
+import android.view.TextureView;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
-    EditText edtID, edtPass;
-    Button btnLogIn,btnReg;
+    EditText edtEmail, edtPass;
+    Button btnLogIn, btnReg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        edtID = findViewById(R.id.editEmail);
+        edtEmail = findViewById(R.id.editEmail);
+
+        edtPass.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == R.id.editEmail || actionId == EditorInfo.IME_NULL) {
+                    attemptLogin();
+                    return true;
+                }
+                return false;
+            }
+        });
         edtPass = findViewById(R.id.editPassword);
-        btnLogIn=findViewById(R.id.LoginBtn);
-        btnReg=findViewById(R.id.SignUpBtn);
+        btnLogIn = findViewById(R.id.LoginBtn);
+        btnReg = findViewById(R.id.SignUpBtn);
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,14 +46,54 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 Bundle b = new Bundle();
                 intent.putExtras(b);
                 startActivity(intent);
             }
         });
+    }
+
+    private void attemptLogin() {
+        String password;
+        {
+            edtEmail.setError(null);
+            edtPass.setError(null);
+
+            String email = edtEmail.getText().toString();
+            password = edtPass.getText().toString();
+
+            boolean cancel = false;
+            View focusview = null;
+
+            if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+                edtPass.setError("Mật khẩu phải ít nhất 8 kí tự!");
+                focusview = edtPass;
+                cancel = true;
+            }
+            if (TextUtils.isEmpty(email)) {
+                edtEmail.setError("Email không được rỗng!");
+                focusview = edtEmail;
+                cancel = true;
+            } else if (!isEmailValid(email)) {
+                edtEmail.setError("Email không đúng định dạng");
+                focusview = edtEmail;
+                cancel = true;
+            }
+            if (cancel) {
+                focusview.requestFocus();
+            }
+        }
+
+    }
+    private boolean isEmailValid (String email) {
+        return email.contains("@");
+    }
+    private boolean isPasswordValid (String password) {
+        return password.length() > 7;
     }
 }
