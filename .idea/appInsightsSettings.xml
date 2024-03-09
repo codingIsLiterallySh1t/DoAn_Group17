@@ -8,10 +8,17 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
+<<<<<<< HEAD
                   <option name="appId" value="com.thuchanh.doan" />
                   <option name="mobileSdkAppId" value="1:571113942671:android:d48039137f4eaaee948afa" />
                   <option name="projectId" value="login-a4685" />
                   <option name="projectNumber" value="571113942671" />
+=======
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
+>>>>>>> origin/master
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
