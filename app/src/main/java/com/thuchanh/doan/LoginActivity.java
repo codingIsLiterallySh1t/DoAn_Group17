@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               register();
+                register();
             }
         });
     }
