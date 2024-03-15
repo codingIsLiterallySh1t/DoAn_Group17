@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity
 
     BottomNavigationView bottomNavigationView;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity
     HomeFragment homeFragment = new HomeFragment();
     InfoFragment infoFragment = new InfoFragment();
     SettingsFragment settingsFragment = new SettingsFragment();
+
+
 
     @Override
     public boolean
