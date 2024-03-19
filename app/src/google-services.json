@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "230860104464",
-    "project_id": "doan-7bf75",
-    "storage_bucket": "doan-7bf75.appspot.com"
+    "project_number": "571113942671",
+    "project_id": "login-a4685",
+    "storage_bucket": "login-a4685.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:230860104464:android:a659e840dc70ed0ecafb95",
+        "mobilesdk_app_id": "1:571113942671:android:d48039137f4eaaee948afa",
         "android_client_info": {
           "package_name": "com.thuchanh.doan"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "571113942671-svgg2m7v9spmlkqmstbde2ec693slmfv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thuchanh.doan",
+            "certificate_hash": "50cababa9234769da0d557e4faec8098d1b22e19"
+          }
+        },
+        {
+          "client_id": "571113942671-hp0ph4ikhgceb189ddvfli0jn2r3f5lq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBaCcge5Hcgqq9zDUXr2NATQIxlQ4pkmiI"
+          "current_key": "AIzaSyDMQyrii4qBjDiTKfeI8mxxutOZufOoWUU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571113942671-hp0ph4ikhgceb189ddvfli0jn2r3f5lq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
