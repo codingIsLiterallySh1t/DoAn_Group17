@@ -155,6 +155,16 @@
                 android:backgroundTint="#FF9800"
                 android:text="Cập nhật thông tin"
                 android:textColor="#FFFFFF" />
+            <Button
+                android:id="@+id/btn_signout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="40sp"
+                android:backgroundTint="#FF9800"
+                android:text="Đăng xuất"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </ScrollView>
 
