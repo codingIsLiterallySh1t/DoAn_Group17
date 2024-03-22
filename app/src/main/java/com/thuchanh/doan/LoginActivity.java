@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -25,7 +24,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.GoogleAuthCredential;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 import org.jetbrains.annotations.NotNull;
@@ -47,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         btnReg=findViewById(R.id.SignUpBtn);
         mAuth=FirebaseAuth.getInstance();
         btn_google = findViewById(R.id.btn_google);
+
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -60,13 +59,13 @@ public class LoginActivity extends AppCompatActivity {
                 startActivityForResult(i,1234);
             }
         });
+
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 login();
             }
         });
-
 
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         });
             } catch (ApiException e) {
-                String errorMessage = "Google sign in failed: " + e.getMessage();
+                String errorMessage = "Đăng nhập qua Google thất bại: " + e.getMessage();
                 Toast.makeText(LoginActivity.this, errorMessage, Toast.LENGTH_SHORT).show();
             }
         }

@@ -34,10 +34,6 @@ public class MainActivity extends AppCompatActivity
     }
     HomeFragment homeFragment = new HomeFragment();
     InfoFragment infoFragment = new InfoFragment();
-    SettingsFragment settingsFragment = new SettingsFragment();
-
-
-
     @Override
     public boolean
     onNavigationItemSelected(@NonNull MenuItem item)
@@ -54,13 +50,6 @@ public class MainActivity extends AppCompatActivity
                 getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.flFragment, infoFragment)
-                        .commit();
-                return true;
-
-            case R.id.settings:
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.flFragment, settingsFragment)
                         .commit();
                 return true;
         }
