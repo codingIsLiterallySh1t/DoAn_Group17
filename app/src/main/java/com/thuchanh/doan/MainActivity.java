@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity
     }
     HomeFragment homeFragment = new HomeFragment();
     InfoFragment infoFragment = new InfoFragment();
+
+
+
+
     @Override
     public boolean
     onNavigationItemSelected(@NonNull MenuItem item)
