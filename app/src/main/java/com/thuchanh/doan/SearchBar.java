@@ -1,33 +1,30 @@
 package com.thuchanh.doan;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class SearchBar extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_search_bar);
 
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.search);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    return true;
-                case R.id.search:
                     startActivity(new Intent(getApplicationContext(), SearchBar.class));
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     finish();
+                    return true;
+                case R.id.search:
                     return true;
                 case R.id.settings:
                     startActivity(new Intent(getApplicationContext(), SearchBar.class));
