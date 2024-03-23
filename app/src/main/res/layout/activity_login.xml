@@ -73,12 +73,13 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textViewhint"
+                android:id="@+id/tvForgotPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Không Nhớ Mật Khẩu? Khôi Phục Ngay"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:clickable="true"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/LoginBtn"
