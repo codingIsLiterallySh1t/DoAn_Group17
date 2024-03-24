@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">DoAn</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="edit_profil">
-        Edit Profile
-    </string>
+    <string name="app_name">Bottom Navigation</string>
+    <string name="title_page">Home Page</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_profile">Profile</string>
     <string name="default_web_client_id">571113942671-hp0ph4ikhgceb189ddvfli0jn2r3f5lq.apps.googleusercontent.com</string>
 </resources>

@@ -8,10 +8,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="32dp"
@@ -73,10 +75,12 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textViewhint"
+                android:id="@+id/tvForgotPass"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="32dp"
+                android:clickable="true"
+                android:gravity="center"
                 android:text="Không Nhớ Mật Khẩu? Khôi Phục Ngay"
                 android:textAlignment="center" />
 
@@ -149,13 +153,6 @@
                     android:layout_weight="1"
                     android:clickable="true"
                     app:srcCompat="@drawable/google" />
-
-                <ImageView
-                    android:id="@+id/btn_facebook"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/facbook" />
 
             </LinearLayout>
 

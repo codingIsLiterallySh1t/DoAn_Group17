@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -31,10 +32,11 @@ import org.jetbrains.annotations.NotNull;
 public class LoginActivity extends AppCompatActivity {
     EditText edtID, edtPass;
     Button btnLogIn,btnReg;
+    TextView tvForgotPass;
     private FirebaseAuth mAuth;
     private ImageView btn_google;
     private GoogleSignInClient client;
-    @SuppressLint("WrongViewCast")
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         btnReg=findViewById(R.id.SignUpBtn);
         mAuth=FirebaseAuth.getInstance();
         btn_google = findViewById(R.id.btn_google);
+        tvForgotPass = findViewById(R.id.tvForgotPass);
 
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -64,6 +67,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 login();
+            }
+        });
+
+        tvForgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                forgotpassword();
             }
         });
 
@@ -87,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity_Guest.class);
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -104,6 +114,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private void register(){
         Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+        startActivity(i);
+    }
+
+    private void forgotpassword(){
+        Intent i = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
         startActivity(i);
     }
     private void login(){
@@ -124,7 +139,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(getApplicationContext(),"Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-                    Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+                    Intent intent =new Intent(LoginActivity.this, MainActivity_Guest.class);
                     startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(),"Đăng nhập không thành công!", Toast.LENGTH_SHORT).show();
