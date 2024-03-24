@@ -28,13 +28,7 @@
             android:name=".UserInfo_Guest"
             android:exported="false" />
         <activity
-            android:name=".AccountSettings"
-            android:exported="false" />
-        <activity
             android:name=".SearchBar"
-            android:exported="false" />
-        <activity
-            android:name=".HomePage"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
