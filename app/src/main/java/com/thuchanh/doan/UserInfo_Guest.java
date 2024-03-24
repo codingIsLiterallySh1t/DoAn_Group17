@@ -2,17 +2,31 @@ package com.thuchanh.doan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class UserInfo_Guest extends AppCompatActivity {
 
+    Button btnLogin;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info_guest);
+
+        btnLogin = findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login();
+            }
+        });
+
 
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.info);
@@ -34,5 +48,9 @@ public class UserInfo_Guest extends AppCompatActivity {
             }
             return false;
         });
+    }
+    private void login(){
+        Intent i = new Intent(UserInfo_Guest.this, LoginActivity.class);
+        startActivity(i);
     }
 }
