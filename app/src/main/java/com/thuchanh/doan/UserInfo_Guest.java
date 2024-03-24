@@ -34,12 +34,12 @@ public class UserInfo_Guest extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    startActivity(new Intent(getApplicationContext(), SearchBar.class));
+                    startActivity(new Intent(getApplicationContext(), MainActivity_Guest.class));
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.search:
-                    startActivity(new Intent(getApplicationContext(), SearchBar.class));
+                    startActivity(new Intent(getApplicationContext(), SearchBar_Guest.class));
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     finish();
                     return true;
