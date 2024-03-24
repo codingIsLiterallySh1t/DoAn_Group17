@@ -3,6 +3,7 @@ package com.thuchanh.doan;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class UserInfo_Registered extends AppCompatActivity {
 
     Button btn_sign_out;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

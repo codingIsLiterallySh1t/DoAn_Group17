@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText edtID, edtPass;
+    EditText edtID, edtPass, edtUsername, edtPhone;
     Button btnReg;
     private FirebaseAuth mAuth;
 
@@ -29,6 +29,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         edtID = findViewById(R.id.editEmail);
+        edtPhone = findViewById(R.id.editphone);
+        edtUsername = findViewById(R.id.editusername);
         edtPass = findViewById(R.id.textEditPass);
         btnReg = findViewById(R.id.SignInBtn);
         mAuth = FirebaseAuth.getInstance();
@@ -42,9 +44,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void register() {
-        String email, pass;
-        email = edtID.getText().toString();
-        pass = edtPass.getText().toString();
+        String email, pass, username, phone;
+        email = edtID.getText().toString().trim();
+        pass = edtPass.getText().toString().trim();
+        username = edtUsername.getText().toString().trim();
+        phone = edtPhone.getText().toString().trim();
 
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(this, "Vui lòng nhập Email!", Toast.LENGTH_SHORT).show();
@@ -60,6 +64,9 @@ public class RegisterActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                    intent.putExtra("username",username);
+                    intent.putExtra("email",email);
+                    intent.putExtra("phone",phone);
                     startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "Tạo tài khoản không thành công", Toast.LENGTH_SHORT).show();
