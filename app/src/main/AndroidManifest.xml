@@ -25,10 +25,13 @@
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".UserInfo_Guest"
+            android:name=".UserInfo_Registered"
             android:exported="false" />
         <activity
-            android:name=".SearchBar"
+            android:name=".SearchBar_Guest"
+            android:exported="false" />
+        <activity
+            android:name=".SearchBar_Registered"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
@@ -37,7 +40,7 @@
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".UserInfo_Registered"
+            android:name=".UserInfo_Guest"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
