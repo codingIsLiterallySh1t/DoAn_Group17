@@ -2,19 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:icon="@drawable/ic_home_layer"
+        android:icon="@drawable/ic_home"
         android:title="Home" />
     <item
         android:id="@+id/search"
-        android:icon="@drawable/ic_search_foreground"
+        android:icon="@drawable/ic_search"
         android:title="Search" />
     <item
-        android:id="@+id/settings"
-        android:icon="@drawable/ic_settings_foreground"
-        android:title="Settings" />
-    <item
         android:id="@+id/info"
-        android:icon="@drawable/ic_user_foreground"
+        android:icon="@drawable/ic_user"
         android:title="Info" />
 
 </menu>

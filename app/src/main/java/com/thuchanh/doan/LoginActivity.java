@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity_Guest.class);
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -139,7 +139,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(getApplicationContext(),"Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-                    Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+                    Intent intent =new Intent(LoginActivity.this, MainActivity_Guest.class);
                     startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(),"Đăng nhập không thành công!", Toast.LENGTH_SHORT).show();

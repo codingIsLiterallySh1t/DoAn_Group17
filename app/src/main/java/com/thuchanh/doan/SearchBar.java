@@ -26,11 +26,6 @@ public class SearchBar extends AppCompatActivity {
                     return true;
                 case R.id.search:
                     return true;
-                case R.id.settings:
-                    startActivity(new Intent(getApplicationContext(), SearchBar.class));
-                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
-                    finish();
-                    return true;
                 case R.id.info:
                     startActivity(new Intent(getApplicationContext(), SearchBar.class));
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);

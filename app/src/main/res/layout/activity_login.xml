@@ -8,10 +8,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="32dp"
@@ -75,11 +77,12 @@
             <TextView
                 android:id="@+id/tvForgotPass"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="32dp"
+                android:clickable="true"
+                android:gravity="center"
                 android:text="Không Nhớ Mật Khẩu? Khôi Phục Ngay"
-                android:textAlignment="center"
-                android:clickable="true"/>
+                android:textAlignment="center" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/LoginBtn"
