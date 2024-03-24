@@ -21,7 +21,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="243dp"
-                android:src="@tools:sample/avatars"
+                android:src="@drawable/main_title"
                 app:srcCompat="@drawable/main_title" />
 
             <TextView
