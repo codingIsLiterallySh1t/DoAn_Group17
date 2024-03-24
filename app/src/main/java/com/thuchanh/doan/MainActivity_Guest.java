@@ -29,12 +29,12 @@ public class MainActivity_Guest extends AppCompatActivity {
                 case R.id.home:
                     return true;
                 case R.id.search:
-                    startActivity(new Intent(getApplicationContext(), SearchBar.class));
+                    startActivity(new Intent(getApplicationContext(), SearchBar_Guest.class));
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.info:
-                    startActivity(new Intent(getApplicationContext(), SearchBar.class));
+                    startActivity(new Intent(getApplicationContext(), UserInfo_Guest.class));
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     finish();
                     return true;

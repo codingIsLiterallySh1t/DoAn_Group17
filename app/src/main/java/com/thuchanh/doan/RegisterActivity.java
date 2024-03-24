@@ -51,7 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
         if (TextUtils.isEmpty(pass)) {
-            Toast.makeText(this, "Vui lòng nhập password!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Vui lòng nhập password!", Toast.LENGTH_SHORT).show();
             return;
         }
         mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
