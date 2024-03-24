@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +17,8 @@ import android.view.ViewGroup;
  */
 public class DialogFragment extends Fragment {
 
+    EditText edt_updateHoTen, edt_updateEmail, edt_updateSDT, edt_updateDiaChi;
+    Button btn_savethongtin;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,7 +59,13 @@ public class DialogFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+        edt_updateHoTen = edt_updateHoTen.findViewById(R.id.edt_updateHoTen);
+        edt_updateEmail = edt_updateEmail.findViewById(R.id.edt_updateEmail);
+        edt_updateSDT = edt_updateSDT.findViewById(R.id.edt_updateSDT);
+        edt_updateDiaChi = edt_updateDiaChi.findViewById(R.id.edt_updateDiaChi);
+        btn_savethongtin = btn_savethongtin.findViewById(R.id.btn_savethongtin);
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
