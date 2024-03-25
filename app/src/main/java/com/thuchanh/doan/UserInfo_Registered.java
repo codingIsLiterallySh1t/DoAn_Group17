@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class UserInfo_Registered extends AppCompatActivity {
 
-    Button btn_sign_out;
+    Button btn_sign_out, btn_back;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,14 @@ public class UserInfo_Registered extends AppCompatActivity {
         });
 
         btn_sign_out = findViewById(R.id.btn_sign_out);
+        btn_back = findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backtomain();
+            }
+        });
         btn_sign_out.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,5 +74,9 @@ public class UserInfo_Registered extends AppCompatActivity {
                 });
             }
         });
+    }
+    private void backtomain(){
+        Intent i = new Intent(UserInfo_Registered.this, MainActivity_Registered.class);
+        startActivity(i);
     }
 }
