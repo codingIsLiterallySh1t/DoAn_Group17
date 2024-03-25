@@ -19,7 +19,7 @@
             android:name=".MainActivity_Registered"
             android:exported="false" />
         <activity
-            android:name=".MainActivity_Guest"
+            android:name=".UserInfo_Guest"
             android:exported="false" />
         <activity
             android:name=".ForgotPasswordActivity"
@@ -42,7 +42,7 @@
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".UserInfo_Guest"
+            android:name=".MainActivity_Guest"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
