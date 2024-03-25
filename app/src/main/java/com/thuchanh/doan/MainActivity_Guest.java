@@ -2,6 +2,8 @@ package com.thuchanh.doan;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity_Guest extends AppCompatActivity {
 
-
+    ImageButton img1, img2, img3;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -35,6 +37,18 @@ public class MainActivity_Guest extends AppCompatActivity {
                     return true;
             }
             return false;
+        });
+
+        img1 = (ImageButton) findViewById(R.id.btnIMG1);
+        img2 = (ImageButton) findViewById(R.id.btnIMG2);
+
+
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity_Guest.this, DetailActivity_Guest.class);
+                startActivity(intent);
+            }
         });
     }
 }
